@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+interface IStyle {
+  [prop: string]: string
+}
 @Component({
   selector: 'main-component',
   templateUrl: './main.component.html',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
   protected isActive: boolean = false;
-  protected currentStyles: Record<string, string> = {}
+  protected currentStyles: IStyle = {}
   setCurrentStyles(){
     this.currentStyles = {
       'color': this.isActive ? 'red' : 'black'

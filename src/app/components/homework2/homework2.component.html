@@ -1,0 +1,21 @@
+<h1>Ng For</h1>
+<ul>
+    <li *ngFor="let letter of letterList">{{letter}}</li>
+</ul>
+<h1>Ng If</h1>
+<ul>
+    <ng-container  *ngFor="let letter of letterList">
+        <li *ngIf="letter === 'B'">{{letter}}</li>
+    </ng-container>
+</ul>
+<h1>Ng Switch</h1>
+<ul>
+    <ng-container  *ngFor="let letter of letterList">
+        <ng-container [ngSwitch]="letter">
+            <li *ngSwitchCase="'A'">1</li>
+            <li *ngSwitchCase="'B'">2</li>
+            <li *ngSwitchCase="'C'">3</li>
+        </ng-container>
+        
+    </ng-container>
+</ul>

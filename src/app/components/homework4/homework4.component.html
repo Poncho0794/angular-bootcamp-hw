@@ -3,5 +3,8 @@
 <button (click)="handleClick()"> Trigger the event, please! </button>
 
 <h2>One way / Two Way data binding</h2>
+
+<input type="text" [value]="textVariable"/>
+
 <input type="text" [(ngModel)]="textVariable"/>
 <span> What variable says: {{ textVariable }}</span>

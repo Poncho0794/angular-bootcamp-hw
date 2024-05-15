@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { MyFirstComponent } from './my-first-module/components/my-first-component/my-first.component';
+import { TestEagerLoadingComponent } from './components/test-eager-loading/test-eager-loading.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,19 @@ const routes: Routes = [
     path: "material",
     loadChildren: () => import('./material-impl/material-impl.module')
     .then(m => m.MaterialImplModule)
-  }
+  },
+  {
+    path: "routing",
+    component: TestEagerLoadingComponent,
+    children: [
+      {
+        path: "lazy",
+        loadChildren: () => import('./routing/routing.module')
+        .then(m => m.RoutingModule)
+      },
+    ]
+  },
+  
 ];
 
 @NgModule({

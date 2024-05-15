@@ -14,6 +14,8 @@ import { ProvidersModule } from './providers/providers.module';
 import { PipesModule } from './pipes/pipes.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialImplModule } from './material-impl/material-impl.module';
+import { RoutingModule } from './routing/routing.module';
+import { TestEagerLoadingComponent } from './components/test-eager-loading/test-eager-loading.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { MaterialImplModule } from './material-impl/material-impl.module';
     Homework3Component,
     CapitalizeDirective,
     Homework4Component,
+    TestEagerLoadingComponent,
     
   ],
   imports: [
@@ -32,7 +35,8 @@ import { MaterialImplModule } from './material-impl/material-impl.module';
     MyFirstModule,
     ProvidersModule,
     PipesModule,
-    MaterialImplModule
+    MaterialImplModule,
+    RoutingModule
   ],
   providers: [
     provideAnimationsAsync()

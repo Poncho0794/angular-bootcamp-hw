@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { MyFirstModule } from './my-first-module/my-first.module';
 import { ProvidersModule } from './providers/providers.module';
 import { PipesModule } from './pipes/pipes.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialImplModule } from './material-impl/material-impl.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PipesModule } from './pipes/pipes.module';
     Homework2Component,
     Homework3Component,
     CapitalizeDirective,
-    Homework4Component
+    Homework4Component,
+    
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,12 @@ import { PipesModule } from './pipes/pipes.module';
     FormsModule,
     MyFirstModule,
     ProvidersModule,
-    PipesModule
+    PipesModule,
+    MaterialImplModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

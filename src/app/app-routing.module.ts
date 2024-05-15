@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MyFirstComponent } from './components/my-first-component/my-first.component';
+import { MainComponent } from './components/main/main.component';
+import { MyFirstComponent } from './my-first-module/components/my-first-component/my-first.component';
 
 const routes: Routes = [
   {
+    path: "",
+    component: MainComponent
+  },
+  {
     path: "individual",
     component: MyFirstComponent
+  },
+  {
+    path: "providers",
+    loadChildren: () => import('./providers/providers.module')
+    .then(m => m.ProvidersModule)
   }
 ];
 

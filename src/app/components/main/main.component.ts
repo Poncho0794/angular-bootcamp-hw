@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RootService } from '../../providers/services/root.service';
 interface IStyle {
   [prop: string]: string
 }
@@ -10,6 +11,11 @@ interface IStyle {
 export class MainComponent {
   protected isActive: boolean = false;
   protected currentStyles: IStyle = {}
+  text: string
+  constructor(private service: RootService){
+    this.text = service.persistentData
+
+  }
   setCurrentStyles(){
     this.currentStyles = {
       'color': this.isActive ? 'red' : 'black'

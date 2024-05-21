@@ -5,18 +5,18 @@ import { TestRoutesDynamicsComponent } from './components/test-routes-dynamics/t
 
 const routes: Routes = [
   {
-    path:"",
-    pathMatch:"full",
-    component: TestRoutingComponent
+    path: '',
+    pathMatch: 'full',
+    component: TestRoutingComponent,
   },
   {
-    path:":slug",
-    component: TestRoutesDynamicsComponent
-  }
+    path: ':slug',
+    component: TestRoutesDynamicsComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class RoutingRoutingModule { }
+export class RoutesRoutingModule {}

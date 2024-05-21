@@ -8,8 +8,8 @@ import { ProviderService } from '../../services/provider.service';
   providers: [ProviderService]
 })
 export class TestProvidersComponent {
-  text: string
+  text: string;
   constructor(private providerService: ProviderService){
-    this.text = providerService.providerServiceName
+    this.text = providerService.providerServiceName;
   }
 }

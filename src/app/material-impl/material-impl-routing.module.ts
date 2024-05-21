@@ -4,13 +4,13 @@ import { TestMaterialComponent } from './components/test-material/test-material.
 
 const routes: Routes = [
   {
-    path:"",
-    component: TestMaterialComponent
-  }
+    path: '',
+    component: TestMaterialComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MaterialImplRoutingModule { }
+export class MaterialImplRoutingModule {}

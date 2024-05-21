@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { MaterialImplRoutingModule } from './material-impl-routing.module';
 import { TestMaterialComponent } from './components/test-material/test-material.component';
 
-
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { DialogHwComponent } from './components/dialog-hw/dialog-hw.component';
 import { FormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {
   MatDialog,
   MAT_DIALOG_DATA,
@@ -33,6 +32,6 @@ import {
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
-  ]
+  ],
 })
-export class MaterialImplModule { }
+export class MaterialImplModule {}

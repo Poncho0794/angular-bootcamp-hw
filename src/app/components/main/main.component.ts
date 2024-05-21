@@ -10,19 +10,19 @@ interface IStyle {
 })
 export class MainComponent {
   protected isActive: boolean = false;
-  protected currentStyles: IStyle = {}
-  text: string
+  protected currentStyles: IStyle = {};
+  text: string;
   constructor(private service: RootService){
-    this.text = service.persistentData
+    this.text = service.persistentData;
 
   }
   setCurrentStyles(){
     this.currentStyles = {
       'color': this.isActive ? 'red' : 'black'
-    }
+    };
   }
   toggleActive = () => {
     this.isActive = !this.isActive;
-    this.setCurrentStyles()
+    this.setCurrentStyles();
   }
 }

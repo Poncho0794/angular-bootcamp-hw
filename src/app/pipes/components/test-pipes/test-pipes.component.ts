@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './test-pipes.component.scss',
 })
 export class TestPipesComponent {
-  protected price: number = 0
-  protected label: string = 'Hello world'
+  protected price: number = 0;
+  protected label: string = 'Hello world';
 }

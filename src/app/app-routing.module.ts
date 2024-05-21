@@ -6,44 +6,52 @@ import { TestEagerLoadingComponent } from './components/test-eager-loading/test-
 
 const routes: Routes = [
   {
-    path: "",
-    component: MainComponent
+    path: '',
+    component: MainComponent,
   },
   {
-    path: "individual",
-    component: MyFirstComponent
+    path: 'individual',
+    component: MyFirstComponent,
   },
   {
-    path: "providers",
-    loadChildren: () => import('./providers/providers.module')
-    .then(m => m.ProvidersModule)
+    path: 'providers',
+    loadChildren: () =>
+      import('./providers/providers.module').then((m) => m.ProvidersModule),
   },
   {
-    path: "pipes",
-    loadChildren: () => import('./pipes/pipes.module')
-    .then(m => m.PipesModule)
+    path: 'pipes',
+    loadChildren: () =>
+      import('./pipes/pipes.module').then((m) => m.PipesModule),
   },
   {
-    path: "material",
-    loadChildren: () => import('./material-impl/material-impl.module')
-    .then(m => m.MaterialImplModule)
+    path: 'material',
+    loadChildren: () =>
+      import('./material-impl/material-impl.module').then(
+        (m) => m.MaterialImplModule
+      ),
   },
   {
-    path: "routing",
+    path: 'final-excercise',
+    loadChildren: () =>
+      import('./final-excercise/final-excercise.module').then(
+        (m) => m.FinalExcerciseModule
+      ),
+  },
+  {
+    path: 'routing',
     component: TestEagerLoadingComponent,
     children: [
       {
-        path: "lazy",
-        loadChildren: () => import('./routing/routing.module')
-        .then(m => m.RoutingModule)
+        path: 'lazy',
+        loadChildren: () =>
+          import('./routing/routing.module').then((m) => m.RoutingModule),
       },
-    ]
+    ],
   },
-  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

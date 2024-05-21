@@ -16,6 +16,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialImplModule } from './material-impl/material-impl.module';
 import { RoutingModule } from './routing/routing.module';
 import { TestEagerLoadingComponent } from './components/test-eager-loading/test-eager-loading.component';
+import { FinalExcerciseModule } from './final-excercise/final-excercise.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TestEagerLoadingComponent } from './components/test-eager-loading/test-
     ProvidersModule,
     PipesModule,
     MaterialImplModule,
-    RoutingModule
+    RoutingModule,
+    FinalExcerciseModule
   ],
   providers: [
     provideAnimationsAsync()

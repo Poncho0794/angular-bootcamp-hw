@@ -1,2 +1,5 @@
-<p>a1 works!</p>
+@for (itemToSell of ItemsToSell; track itemToSell.id) {
+<app-list-item [list-item]="itemToSell"></app-list-item>
+}
+
 <app-z1></app-z1>

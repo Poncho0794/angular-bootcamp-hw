@@ -6,9 +6,10 @@ import { A1Component } from './components/a1/a1.component';
 import { A2Component } from './components/a2/a2.component';
 import { A3Component } from './components/a3/a3.component';
 import { ZModule } from '../z/z.module';
+import { ListItemComponent } from './components/list-item/list-item.component';
 
 @NgModule({
-  declarations: [A1Component, A2Component, A3Component],
+  declarations: [A1Component, A2Component, A3Component, ListItemComponent],
   imports: [CommonModule, ARoutingModule, ZModule],
 })
 export class AModule {}

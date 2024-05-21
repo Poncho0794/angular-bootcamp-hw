@@ -10,6 +10,10 @@ import { CapitalizeDirective } from './directives/capitalize-directive.directive
 import { Homework4Component } from './components/homework4/homework4.component';
 import { FormsModule } from '@angular/forms';
 import { MyFirstModule } from './my-first-module/my-first.module';
+import { ProvidersModule } from './providers/providers.module';
+import { PipesModule } from './pipes/pipes.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialImplModule } from './material-impl/material-impl.module';
 
 @NgModule({
   declarations: [
@@ -18,15 +22,21 @@ import { MyFirstModule } from './my-first-module/my-first.module';
     Homework2Component,
     Homework3Component,
     CapitalizeDirective,
-    Homework4Component
+    Homework4Component,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MyFirstModule
+    MyFirstModule,
+    ProvidersModule,
+    PipesModule,
+    MaterialImplModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

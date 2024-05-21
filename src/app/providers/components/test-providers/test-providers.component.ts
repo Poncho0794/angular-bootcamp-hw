@@ -5,11 +5,11 @@ import { ProviderService } from '../../services/provider.service';
   selector: 'app-test-providers',
   templateUrl: './test-providers.component.html',
   styleUrl: './test-providers.component.scss',
-  providers: [ProviderService]
+  providers: [ProviderService],
 })
 export class TestProvidersComponent {
   text: string;
-  constructor(private providerService: ProviderService){
+  constructor(private providerService: ProviderService) {
     this.text = providerService.providerServiceName;
   }
 }

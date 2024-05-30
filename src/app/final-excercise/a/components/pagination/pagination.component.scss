@@ -1,0 +1,29 @@
+:host {
+    .items-container {
+        display: flex;
+    }
+    .buttons-container {
+        button {
+            margin: 8px 4px;
+            width: 64px;
+            height: 32px;
+            border: none;
+            background-color:#c2185b;
+            color: white; 
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:disabled {
+
+            background-color:#9f6b80;
+            color: white; 
+            cursor:auto;
+        }
+        button:first-of-type {
+            margin-left: 8px;
+        }
+        button:last-of-type {
+            margin-right: 8px;
+        }
+    }
+}

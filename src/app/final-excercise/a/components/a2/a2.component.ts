@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IItem } from '../../../z/utils/ItemsToSell';
-import { StorageService } from '../../../services/storage.service';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-a2',

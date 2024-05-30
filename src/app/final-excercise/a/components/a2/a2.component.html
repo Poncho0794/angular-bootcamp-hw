@@ -1,3 +1,15 @@
-<h1>{{ item.title }}</h1>
 <img [src]="item ? item.photos[0] : ''" />
-<p>{{ item.description }}</p>
+<div class="info">
+  <h1>{{ item.title }}</h1>
+  <h2>Descripcion</h2>
+  <p>{{ item.description }}</p>
+  <h2>Precios</h2>
+  <ul>
+    @for( price of item.prices | keyvalue; track $index) {
+    <li>
+      <b>{{ price.key }}: </b>
+      <span>{{ price.value | round | currency : "MXN" }}</span>
+    </li>
+    }
+  </ul>
+</div>

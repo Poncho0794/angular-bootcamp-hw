@@ -9,9 +9,10 @@ import { ZModule } from '../z/z.module';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationPipe } from './pipes/pagination.pipe';
+import { RoundPipe } from './pipes/round.pipe';
 
 @NgModule({
-  declarations: [A1Component, A2Component, A3Component, ListItemComponent, PaginationComponent, PaginationPipe],
+  declarations: [A1Component, A2Component, A3Component, ListItemComponent, PaginationComponent, PaginationPipe, RoundPipe],
   imports: [CommonModule, ARoutingModule, ZModule],
 })
 export class AModule {}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IItem, ItemsToSell } from '../../../z/utils/ItemsToSell';
+import { StorageService } from '../../../services/storage.service';
 
 @Component({
   selector: 'app-a1',
@@ -7,5 +8,8 @@ import { IItem, ItemsToSell } from '../../../z/utils/ItemsToSell';
   styleUrl: './a1.component.scss',
 })
 export class A1Component {
-  ItemsToSell: IItem[] = ItemsToSell;
+  ItemsToSell: IItem[] = [];
+  constructor(private itemService: StorageService) {
+    this.ItemsToSell = itemService.getItems();
+  }
 }

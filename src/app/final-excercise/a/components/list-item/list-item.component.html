@@ -5,3 +5,6 @@
   <h3>{{ listItem.title }}</h3>
   <p>{{ listItem.description }}</p>
 </div>
+<div class="actions">
+  <a [routerLink]="['/a2', listItem.id]">Open detail</a>
+</div>

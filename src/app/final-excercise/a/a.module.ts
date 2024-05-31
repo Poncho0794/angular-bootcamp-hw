@@ -10,9 +10,20 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationPipe } from './pipes/pagination.pipe';
 import { RoundPipe } from './pipes/round.pipe';
+import { FormsModule } from '@angular/forms';
+import { DiscountedPricePipe } from './pipes/discounted-price.pipe';
 
 @NgModule({
-  declarations: [A1Component, A2Component, A3Component, ListItemComponent, PaginationComponent, PaginationPipe, RoundPipe],
-  imports: [CommonModule, ARoutingModule, ZModule],
+  declarations: [
+    A1Component,
+    A2Component,
+    A3Component,
+    ListItemComponent,
+    PaginationComponent,
+    PaginationPipe,
+    RoundPipe,
+    DiscountedPricePipe,
+  ],
+  imports: [CommonModule, ARoutingModule, ZModule, FormsModule],
 })
 export class AModule {}

@@ -17,6 +17,5 @@ export class A2Component {
   ) {
     this.id = route.snapshot.paramMap.get('id');
     this.item = this.id ? storageService.getItem(this.id) : ({} as IItem);
-    console.log(this.id, this.item);
   }
 }

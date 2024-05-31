@@ -8,9 +8,15 @@ import { IItem } from '../../../z/utils/ItemsToSell';
 })
 export class PaginationComponent {
   @Input('items') items!: IItem[];
+
   pages: number = 0;
   currentPage: number = 1;
+
   ngOnInit() {
+    this.pages = Math.ceil(this.items.length / 5);
+  }
+
+  ngOnChanges() {
     this.pages = Math.ceil(this.items.length / 5);
   }
 

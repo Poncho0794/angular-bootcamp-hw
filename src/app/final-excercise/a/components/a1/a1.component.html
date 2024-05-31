@@ -1,2 +1,15 @@
+<h1>Bienvenido a PhotoShop</h1>
+
+<div class="offers-banner">
+  <h2>Checa nuestras ofertas</h2>
+  <input
+    type="checkbox"
+    [(ngModel)]="discountFilter"
+    id="discountFilter"
+    (ngModelChange)="filterDiscountedItems()"
+  />
+  <label for="discountFilter">Ofertas</label>
+</div>
+
 <app-pagination [items]="ItemsToSell"></app-pagination>
 <app-z1></app-z1>

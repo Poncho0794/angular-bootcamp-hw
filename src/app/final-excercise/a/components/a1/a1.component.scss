@@ -1,5 +1,10 @@
 :host {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  .offers-banner {
+    margin: 8px 0;
+    padding: 0 8px;
+    background-color: beige;
+  }
 }

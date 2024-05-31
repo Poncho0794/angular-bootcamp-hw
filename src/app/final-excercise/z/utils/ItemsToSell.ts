@@ -4,6 +4,7 @@ export interface IItem {
   prices: { [tag: string]: number };
   photos: string[];
   description: string;
+  offerDiscount?: number;
 }
 
 export const ItemsToSell: IItem[] = [
@@ -16,6 +17,7 @@ export const ItemsToSell: IItem[] = [
     },
     photos: ['https://api.slingacademy.com/public/sample-photos/1.jpeg'],
     description: 'Cuadro generico para decorar el hogar ',
+    offerDiscount: 20,
   },
   {
     id: '2',
@@ -36,6 +38,7 @@ export const ItemsToSell: IItem[] = [
     },
     photos: ['https://api.slingacademy.com/public/sample-photos/3.jpeg'],
     description: 'Cuadro generico para decorar el hogar ',
+    offerDiscount: 40,
   },
   {
     id: '4',
@@ -56,6 +59,7 @@ export const ItemsToSell: IItem[] = [
     },
     photos: ['https://api.slingacademy.com/public/sample-photos/5.jpeg'],
     description: 'Cuadro generico para decorar el hogar ',
+    offerDiscount: 30,
   },
   {
     id: '6',
@@ -76,6 +80,7 @@ export const ItemsToSell: IItem[] = [
     },
     photos: ['https://api.slingacademy.com/public/sample-photos/7.jpeg'],
     description: 'Cuadro generico para decorar el hogar ',
+    offerDiscount: 25,
   },
   {
     id: '8',

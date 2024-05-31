@@ -3,12 +3,29 @@
   <h1>{{ item.title }}</h1>
   <h2>Descripcion</h2>
   <p>{{ item.description }}</p>
-  <h2>Precios</h2>
+  <h2>
+    Precios
+    <span *ngIf="item.offerDiscount"
+      >( {{ item.offerDiscount }}% de descuento)</span
+    >
+  </h2>
   <ul>
     @for( price of item.prices | keyvalue; track $index) {
     <li>
       <b>{{ price.key }}: </b>
-      <span>{{ price.value | round | currency : "MXN" }}</span>
+      <span [ngClass]="{ discount: item.offerDiscount }">{{
+        price.value | round | currency : "MXN"
+      }}</span>
+      <span *ngIf="item.offerDiscount"
+        ><b>
+          {{
+            price.value
+              | round
+              | discountedPrice : item.offerDiscount
+              | currency : "MXN"
+          }}</b
+        ></span
+      >
     </li>
     }
   </ul>

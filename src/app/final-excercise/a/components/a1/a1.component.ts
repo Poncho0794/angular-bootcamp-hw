@@ -9,8 +9,13 @@ import { StorageService } from '../../services/storage.service';
 })
 export class A1Component {
   ItemsToSell: IItem[];
+  discountFilter: boolean = false;
   constructor(private itemService: StorageService) {
     this.ItemsToSell = itemService.getItems();
-    console.log(ItemsToSell);
+  }
+  filterDiscountedItems() {
+    this.ItemsToSell = !this.discountFilter
+      ? this.itemService.getItems()
+      : this.itemService.getItems().filter((item) => !!item.offerDiscount);
   }
 }

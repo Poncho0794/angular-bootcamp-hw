@@ -10,8 +10,9 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationPipe } from './pipes/pagination.pipe';
 import { RoundPipe } from './pipes/round.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DiscountedPricePipe } from './pipes/discounted-price.pipe';
+import { ItemFormComponent } from './components/item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,14 @@ import { DiscountedPricePipe } from './pipes/discounted-price.pipe';
     PaginationPipe,
     RoundPipe,
     DiscountedPricePipe,
+    ItemFormComponent,
   ],
-  imports: [CommonModule, ARoutingModule, ZModule, FormsModule],
+  imports: [
+    CommonModule,
+    ARoutingModule,
+    ZModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class AModule {}

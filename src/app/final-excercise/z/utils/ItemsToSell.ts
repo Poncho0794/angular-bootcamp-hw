@@ -1,12 +1,14 @@
 export interface IItem {
   id: string;
   title: string;
-  prices: { [tag: string]: number };
+  prices: IPrice;
   photos: string[];
   description: string;
   offerDiscount?: number;
 }
-
+export interface IPrice {
+  [tag: string]: number;
+}
 export const ItemsToSell: IItem[] = [
   {
     id: '1',

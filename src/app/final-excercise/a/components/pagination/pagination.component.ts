@@ -18,6 +18,7 @@ export class PaginationComponent {
 
   ngOnChanges() {
     this.pages = Math.ceil(this.items.length / 5);
+    this.currentPage = 1;
   }
 
   next() {

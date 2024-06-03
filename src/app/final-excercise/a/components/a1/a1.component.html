@@ -10,7 +10,14 @@
   />
   <label for="discountFilter">Ofertas</label>
 </div>
+<app-item-form></app-item-form>
+
+<div class="search-container">
+  <h2>Buscar un cuadro por nombre</h2>
+  <div class="form-group">
+    <label for="imgUrl">Buscar: </label>
+    <input type="text" id="imgUrl" #searchBox />
+  </div>
+</div>
 
 <app-pagination [items]="ItemsToSell"></app-pagination>
-<app-item-form></app-item-form>
-<app-z1></app-z1>

@@ -13,6 +13,7 @@ import { RoundPipe } from './pipes/round.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DiscountedPricePipe } from './pipes/discounted-price.pipe';
 import { ItemFormComponent } from './components/item-form/item-form.component';
+import { ValidateUniquePricetagDirective } from './directives/validate-unique-pricetag.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ItemFormComponent } from './components/item-form/item-form.component';
     RoundPipe,
     DiscountedPricePipe,
     ItemFormComponent,
+    ValidateUniquePricetagDirective,
   ],
   imports: [
     CommonModule,

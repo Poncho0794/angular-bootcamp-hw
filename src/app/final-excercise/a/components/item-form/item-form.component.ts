@@ -36,7 +36,7 @@ export class ItemFormComponent {
   errors?: string[];
   constructor(private storageService: StorageService) {
     this.model = new ItemImpl(
-      String(storageService.getItems().length),
+      String(storageService.getItems().length + 1),
       '',
       {},
       [],
@@ -86,13 +86,27 @@ export class ItemFormComponent {
         `${this.photos.length <= 0 ? 'Fotos' : 'Precios'}: necesitas almenos 1`
       );
     }
-    // TODO: Render errors
     if (this.errors.length) return;
     const prices = this.prices.value.reduce((result: IPrice, price: any) => {
       return { ...result, [price.dimension]: price.price };
     }, {});
-    this.model = { ...this.model, ...this.itemForm.value, prices };
-    console.log(this.title?.hasError('required'));
+    const photos = this.photos.value.map((photoObj: any) => {
+      return photoObj.imgUrl;
+    });
+    this.model = { ...this.model, ...this.itemForm.value, prices, photos };
+    console.log(this.model);
+    this.storageService.addItem(this.model);
+    this.clear();
+  }
+  clear() {
+    this.itemForm.reset();
+    this.model = new ItemImpl(
+      String(this.storageService.getItems().length + 1),
+      '',
+      {},
+      [],
+      ''
+    );
   }
   get prices() {
     return this.itemForm.get('prices') as FormArray;

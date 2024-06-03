@@ -8,14 +8,16 @@ import { StorageService } from '../../services/storage.service';
   styleUrl: './a1.component.scss',
 })
 export class A1Component {
-  ItemsToSell: IItem[];
+  ItemsToSell: IItem[] = [];
   discountFilter: boolean = false;
   constructor(private itemService: StorageService) {
-    this.ItemsToSell = itemService.getItems();
+    this.itemService.getSubject().subscribe((items) => {
+      this.ItemsToSell = items;
+    });
   }
   filterDiscountedItems() {
     this.ItemsToSell = !this.discountFilter
-      ? this.itemService.getItems()
-      : this.itemService.getItems().filter((item) => !!item.offerDiscount);
+      ? this.itemService.getSubject().getValue()
+      : this.ItemsToSell.filter((item) => !!item.offerDiscount);
   }
 }

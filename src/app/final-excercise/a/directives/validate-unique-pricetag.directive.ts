@@ -14,7 +14,11 @@ export function ValidateUniquePricetag(pricesArray: FormArray): ValidatorFn {
     const errors = pricesArray.controls.reduce(
       (errorsArr: string[], formGroup) => {
         const dimensionInput = (formGroup as FormGroup).controls['dimension'];
-        if (control.value === dimensionInput.value && control.value.length) {
+        if (
+          control.value &&
+          control.value === dimensionInput.value &&
+          control.value.length
+        ) {
           errorsArr.push((control as FormControl).value);
         }
         return errorsArr as string[];

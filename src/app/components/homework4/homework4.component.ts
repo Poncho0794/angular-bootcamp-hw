@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Homework4Component {
 
-  protected textVariable = "Hello World"
+  protected textVariable = "Hello World";
   handleClick = function(){
-    alert("I was triggered by an event")
+    alert("I was triggered by an event");
   }
 }

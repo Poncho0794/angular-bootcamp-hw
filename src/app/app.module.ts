@@ -10,6 +10,8 @@ import { CapitalizeDirective } from './directives/capitalize-directive.directive
 import { Homework4Component } from './components/homework4/homework4.component';
 import { FormsModule } from '@angular/forms';
 import { MyFirstModule } from './my-first-module/my-first.module';
+import { ProvidersModule } from './providers/providers.module';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MyFirstModule } from './my-first-module/my-first.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MyFirstModule
+    MyFirstModule,
+    ProvidersModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,29 +1,10 @@
-import { Component, input } from '@angular/core';
-import { IItem, IPrice } from '../../../z/utils/ItemsToSell';
+import { Component } from '@angular/core';
+import { IPrice } from '../../../z/utils/ItemsToSell';
 import { StorageService } from '../../services/storage.service';
-import {
-  AbstractControl,
-  FormArray,
-  FormControl,
-  FormGroup,
-  ValidationErrors,
-  Validators,
-} from '@angular/forms';
-import {
-  ValidateUniquePricetag,
-  ValidateUniquePricetagDirective,
-} from '../../directives/validate-unique-pricetag.directive';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ValidateUniquePricetag } from '../../directives/validate-unique-pricetag.directive';
 import { checkErrorsInForm } from './utils';
-class ItemImpl implements IItem {
-  constructor(
-    public id: string,
-    public title: string,
-    public prices: IPrice,
-    public photos: string[],
-    public description: string,
-    public offerDiscount?: number | undefined
-  ) {}
-}
+import { ItemImpl } from './item-impl';
 
 @Component({
   selector: 'app-item-form',

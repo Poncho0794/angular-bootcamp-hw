@@ -10,7 +10,7 @@
     >
   </h2>
   <ul>
-    @for( price of item.prices | keyvalue; track $index) {
+    @for( price of item.prices | keyvalue; track price) {
     <li>
       <b>{{ price.key }}: </b>
       <span [ngClass]="{ discount: item.offerDiscount }">{{

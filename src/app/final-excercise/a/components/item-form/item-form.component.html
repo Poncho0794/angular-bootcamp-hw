@@ -15,7 +15,7 @@
   </div>
   <div class="form-group">
     <label for="description">Precios*: </label>
-    <button (click)="addPrice()">Agregar Precio</button>
+    <button (click)="addPrice()" type="button">Agregar Precio</button>
   </div>
   <div class="form-table" formArrayName="prices">
     @for(priceForm of prices.controls; track $index) {
@@ -33,13 +33,15 @@
         <label for="price">Precio*: </label>
         <input type="number" id="price" formControlName="price" required />
       </div>
-      <button (click)="removePrice($index)">Eliminar precio</button>
+      <button (click)="removePrice($index)" type="button">
+        Eliminar precio
+      </button>
     </fieldset>
     }
   </div>
   <div class="form-group">
     <label for="description">Fotos*: </label>
-    <button (click)="addPhoto()">Agregar Fotos</button>
+    <button (click)="addPhoto()" type="button">Agregar Fotos</button>
   </div>
   <div class="form-table" formArrayName="photos">
     @for(photo of photos.controls; track $index) {
@@ -48,7 +50,9 @@
         <label for="imgUrl">Url de la imagen*: </label>
         <input type="text" id="imgUrl" formControlName="imgUrl" required />
       </div>
-      <button (click)="removePhoto($index)">Eliminar precio</button>
+      <button (click)="removePhoto($index)" type="button">
+        Eliminar precio
+      </button>
     </fieldset>
     }
   </div>

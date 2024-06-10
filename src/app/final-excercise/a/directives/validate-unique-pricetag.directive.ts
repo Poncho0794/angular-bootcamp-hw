@@ -34,7 +34,6 @@ export function ValidateUniquePricetag(pricesArray: FormArray): ValidatorFn {
 })
 export class ValidateUniquePricetagDirective implements Validator {
   @Input('pricesArray') pricesArray!: FormArray;
-  constructor() {}
   validate(control: AbstractControl): ValidationErrors | null {
     return ValidateUniquePricetag(this.pricesArray)(control);
   }

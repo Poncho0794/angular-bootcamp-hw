@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  .offers-banner {
+    margin: 8px 0;
+    padding: 0 8px;
+    background-color: beige;
+  }
+  .search-container {
+    margin: 8px 0;
+    padding: 8px;
+    background-color: rgb(212, 247, 196);
+  }
+}

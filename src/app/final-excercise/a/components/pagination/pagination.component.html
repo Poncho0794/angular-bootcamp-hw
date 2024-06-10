@@ -1,0 +1,24 @@
+<div class="items-container">
+  @for (itemToSell of items | pagination: currentPage; track itemToSell.id) {
+  <app-list-item [list-item]="itemToSell"></app-list-item>
+  }
+</div>
+
+<div class="buttons-container">
+  <button [disabled]="this.currentPage === 1" (click)="this.prev()">
+    Prev
+  </button>
+
+  @for (page of '_'.repeat(pages); track $index) {
+  <button
+    (click)="goToPage($index + 1)"
+    [disabled]="this.currentPage === $index + 1"
+  >
+    {{ $index + 1 }}
+  </button>
+  }
+
+  <button [disabled]="this.currentPage === this.pages" (click)="this.next()">
+    Next
+  </button>
+</div>
